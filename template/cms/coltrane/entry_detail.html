@@ -1,10 +1,10 @@
 <html>
-	<head>
-		<title>Entries Detail</title>
-	</head>
-<body>
-	<h1>Entries Detail</h1>
-		<h2>{{ entry.title }}</h2>
-		<p>Published on {{ entry.pub_date|date:"F j, Y" }}</p>
-</body>
+  <head>
+    <title>{{ object.title }}</title>
+  </head>
+  <body>
+    <h1>{{ object.title }}</h1>
+    <p>Published on {{ object.pub_date|date:"F j, Y" }}</p>
+    {{ object.body_html|safe }}
+  </body>
 </html>
